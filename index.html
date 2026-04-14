@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My AR Model</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body { margin: 0; background: #111; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    model-viewer { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <model-viewer
+    src="model.glb"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    alt="My 3D Model">
+    <button slot="ar-button" style="
+      position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+      background: #fff; border: none; border-radius: 24px;
+      padding: 12px 28px; font-size: 16px; font-weight: 600; cursor: pointer;">
+      👆 View in your space
+    </button>
+  </model-viewer>
+</body>
+</html>
